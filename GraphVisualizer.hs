@@ -7,7 +7,7 @@ import Data.Function (on)
 -- Graph Representation: Adjacency List
 type Node = String
 type Graph = Map.Map Node [Node]
-type Path = [(Node, Int, [Node])]
+
 
 -- Create an empty graph
 emptyGraph :: Graph
