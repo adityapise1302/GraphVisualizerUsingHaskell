@@ -94,6 +94,22 @@ addEdgeCLI graph = do
   putStrLn $ "Edge added: " ++ from ++ " <-> " ++ to
   return graph'
 
+-- Remove Edge ClI
+removeEdgeCLI :: Graph -> IO Graph
+removeEdgeCLI graph = do
+  putStrLn "Remove an edge (format: FROM TO):"
+  edge <- getLine
+  let (from, to) = parseEdge edge
+  let graph' = removeEdge graph from to
+  putStrLn $ "Edge removed: " ++ from ++ " <-> " ++ to
+  case graph' == graph of
+    True -> do
+      putStrLn "Edge not found!"
+      return graph
+    False -> do
+      putStrLn $ "Edge removed: " ++ from ++ " <-> " ++ to
+      return graph'
+      
 -- Run BFS CLI
 runBFSCLI :: Graph -> IO ()
 runBFSCLI graph = do
