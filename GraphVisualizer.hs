@@ -150,7 +150,6 @@ removeEdgeCLI graph = do
   edge <- getLine
   let (from, to) = parseEdge edge
   let graph' = removeEdge graph from to
-  putStrLn $ "Edge removed: " ++ from ++ " <-> " ++ to
   case graph' == graph of
     True -> do
       putStrLn "Edge not found!"
