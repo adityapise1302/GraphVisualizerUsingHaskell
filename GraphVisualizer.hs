@@ -8,7 +8,6 @@ import Data.Function (on)
 type Node = String
 type Graph = Map.Map Node [Node]
 
-
 -- Create an empty graph
 emptyGraph :: Graph
 emptyGraph = Map.empty
