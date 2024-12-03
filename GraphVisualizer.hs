@@ -70,7 +70,7 @@ bfsHelper graph ((current,dist):queue) visited step
 
 -- DFS with Visualization
 dfsWithVisualization :: Graph -> Node -> IO ()
-dfsWithVisualization graph start = bfsHelper graph [start] [] 1
+dfsWithVisualization graph start = dfsHelper graph [start] [] 1
 
 -- Helper function for DFS with Visualization
 dfsHelper :: Graph -> [Node] -> [Node] -> Int -> IO ()
