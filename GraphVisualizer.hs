@@ -131,7 +131,6 @@ checkDistances :: String -> [(String, Int)] -> Bool
 checkDistances node distances = any (\(n, _) -> n == node) distances
 
 -- Weighted Dijkstra's Algorithm with Visualization
--- This doesn't work 100% yet but I'm close so I'm going to push just in case and finish it later
 dijkstrasWithVisualization :: Graph -> Node -> Node -> IO ()
 dijkstrasWithVisualization graph start end = dijkstrasHelper graph [start] [] [] start end
 
