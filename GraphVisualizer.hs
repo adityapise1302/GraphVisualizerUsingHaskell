@@ -115,7 +115,7 @@ uwDijkstrasHelper graph ((current,dist):queue) dists visited step
   | otherwise = do
       let neighbors = getNeighborNames graph (current,dist)
       let unvisitedNeighbors = [n | n <- neighbors, not (n `elem` map fst visited)]
-      let neighborDists = [(n, dist) | n <- unvisitedNeighbors]
+      let neighborDists = [(n, dist + 1) | n <- unvisitedNeighbors]
       let newQueue = sortBy (compare `on` snd) (queue ++ neighborDists)
       let newDists = updateDistances dists ((current, dist) : neighborDists)
       putStrLn $ "Step " ++ show step ++ ": Processing Node '" ++ show current ++ "'"
