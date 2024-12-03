@@ -1,3 +1,11 @@
+{-
+    Graph Visualizer is a program which helps to visualize graph algorithms like 
+    BFS, DFS, and Dijkstra Shortest Path. This is a useful tool to learn the graph
+    algorithms.
+
+    Team :- Aditya Pise, Clare O'Brien, Calvin Briscoe
+    Class :- CSC372
+-}
 module GraphVisualizer where
 
 import qualified Data.Map as Map
